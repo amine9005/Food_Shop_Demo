@@ -1,0 +1,285 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none !important;
+}
+
+:root{
+    --first-color:rgb(248,26,92);
+}
+
+
+body{
+    min-width: 380px;
+}
+
+
+.navArea {
+    /*width: 85%;*/
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.navbar-brand {
+    font-size: 2rem;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+.navbar-brand:hover{
+    color: black;
+}
+
+
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 1rem;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    border-radius: .5rem;
+}
+
+.nav-link:hover{
+    color: black;
+    background-color: var(--first-color);
+    
+}
+
+.search{
+    height: 40px;
+    width: 80%;
+    margin-right: -35px;
+    border-radius: 60px;
+    outline: none;
+    border: 2px solid var(--first-color);
+}
+
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: var(--first-color);
+    border-radius: 60px;
+    color: white;
+    font-weight: 700;
+}
+
+
+.main{
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    
+    background: url("/imgs/lunchcopy.jpg") no-repeat ;
+    background-size: cover;
+}
+
+.main h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: var(--first-color);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+
+.btn1:hover{
+    background-color: rgb(223,15,77);
+    transition: 0.5s;
+}
+
+h1{
+    font-weight: 700;
+}
+
+.card:hover{
+    box-shadow: -2px -1px 25px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 25px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 25px -8px rgba(0,0,0,0.75);
+    transition: 0.1s;
+}
+
+.apple{
+    background:  url("/imgs/red.jpg") no-repeat,linear-gradient(rgba(0,0,0,2),rgba(0,0,0,2));
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+.apple h1{
+    font-family: 'Lobster', cursive;
+
+}
+.news{
+    background: black;
+    color: white;
+}
+
+.btn2{
+    height: 53px;
+    width: 100px;
+    background: white;
+    margin-left: -10px;
+    border: 2px solid white;
+    font-weight: 600;
+}
+
+.news input{
+    height: 50px;
+    width: 55%;
+    border: 2px solid white;
+    outline: none;
+    background: black;
+    color: white;
+    margin-top: 21px;
+    font-weight: 600;
+}
+
+.news::placeholder{
+    color: white;
+}
+.news p{
+    margin: 0;
+}
+
+.flex-wrapper{
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.soc{
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+.btn{
+    font: bold 16px Arial;
+    text-decoration: none;
+    padding-top: 14px;
+    height: 45px;
+    width: 35%;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: rgb(223,15,77);
+    transition: 0.5s;
+    color: white;
+}
+
+#menu-btn{
+    display: none;
+    font-size: 2rem;
+}
+
+.d-flex .btn0{
+    display: initial;
+}
+
+
+
+
+@media(max-width:991px){
+    header{
+        padding: 20px;
+    }
+
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-top: var(--black);
+        border-bottom: var(--black);
+        text-align: center;
+        flex-flow: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+
+    }
+
+    .navbar-collapse.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transition: .2s linear;
+    }
+
+    #search-bar{
+        display: none;
+    }
+
+    header .link-btn{
+        position: absolute;
+        left: 10px;
+        display: none;
+    }
+
+    .navbar-collapse ul li{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .navbar-collapse ul li ul{
+        position: relative;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .navbar-collapse ul li ul li {
+        background: var(--light-bg);
+        font-size: 2rem;
+    }
+
+    .navbar-collapse ul li ul li ul{
+        font-size: 2rem;
+        width: 100%;
+        left: 0;
+    }
+
+    .home{
+        background-position: left;
+    }
+
+    .home .content{
+        width: auto;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+
+}
